@@ -4,7 +4,9 @@ It's similar to _markdown_ but much more powerful, standardized and complete but
 
 The file `source.adoc` contains some `asciidoc examples` taken from the reference guide. 
 
-The file `asciidoc_examples.pdf` is the rendeerd output of the source file.
+The file `asciidoc_examples.pdf` is the rendered output of the source file.
+
+If you click on `source.adoc` here in this repo you see the live *HTML* rendering performed by Github. Github supports asciidoc inside any repo and inside the Wiki but not inside Github Pages (because the jekill plugin for asciidoc is not supported, somehow)
 
 ## References:
 
@@ -40,3 +42,5 @@ or you could add this to the header of the document and lose the `-d` option:
 ----
 :doctype: book
 ----
+
+When the document is rendered in the *PDF* format the images are embedded in the document.
