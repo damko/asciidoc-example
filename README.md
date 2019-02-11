@@ -27,11 +27,13 @@ This document can be rendered in different ways:
 
 * as _article_ in *PDF* format with the following command:
 
-`` bash
+
+``` bash
 asciidoctor-pdf -d article source.adoc -o asciidoc_examples.pdf
 ```
 
 * as _book_ in *PDF* format with the following command:
+
 
 ``` bash
 asciidoctor-pdf -d book source.adoc -o asciidoc_examples.pdf
