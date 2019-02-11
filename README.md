@@ -6,13 +6,17 @@ The file `source.adoc` contains some `asciidoc examples` taken from the referenc
 
 The file `asciidoc_examples.pdf` is the rendered output of the source file.
 
-If you click on `source.adoc` here in this repo you see the live *HTML* rendering performed by Github. Github supports asciidoc inside any repo and inside the Wiki but not inside Github Pages (because the jekill plugin for asciidoc is not supported, somehow)
+If you click on `source.adoc` here in this repo you see the live *HTML* rendering performed by Github. 
+
+If you want to see the raw text source, click [here](https://raw.githubusercontent.com/damko/asciidoc-example/master/source.adoc)
+
+Github supports asciidoc inside any repo and inside the Wiki but not inside Github Pages (because the jekill plugin for asciidoc is not supported, somehow)
 
 ## References:
 
-* https://asciidoctor.org/docs/user-manual/[complete user manual]
-* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[quick syntax reference]
-* https://asciidoctor.org/docs/asciidoc-writers-guide/[getting started user guide]
+* [complete user manual](https://asciidoctor.org/docs/user-manual/)
+* [quick syntax reference](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
+* [getting started user guide](https://asciidoctor.org/docs/asciidoc-writers-guide/)
 
 
 ## How to install asciidoctor on Debian
