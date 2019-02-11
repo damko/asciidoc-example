@@ -1,0 +1,454 @@
+= Asciidoc Example
+John Black
+v1.0, date_here
+:toc:
+:imagesdir: images
+:homepage: https://asciidoctor.org
+:sectanchors:
+:sectlinks:
+:sectnums:
+:media: prepress
+
+
+
+== Section titles
+
+== Level 1 Section
+
+=== Level 2 Section
+
+==== Level 3 Section
+
+===== Level 4 Section
+
+====== Level 5 Section
+
+== Paragraphs and blocks
+
+This is a regular paragraph:
+
+This journey begins one late Monday afternoon in Antwerp.
+Our team desperately needs coffee, but none of us dare open the office door.
+
+To leave means code dismemberment and certain death.
+
+---
+
+[quote]
+Never do today what you can put off 'til tomorrow.
+
+---
+
+This is some code:
+
+----
+├── mountall-bootclean.service -> /dev/null
+├── mountall.service -> /dev/null
+├── mountdevsubfs.service -> /dev/null
+├── mountkernfs.service -> /dev/null
+├── mountnfs-bootclean.service -> /dev/null
+├── mountnfs.service -> /dev/null
+├── multi-user.target.wants
+│   ├── console-setup.service -> /lib/systemd/system/console-setup.service
+│   ├── cron.service -> /lib/systemd/system/cron.service
+│   ├── cups-browsed.service -> /lib/systemd/system/cups-browsed.service
+│   ├── cups.path -> /lib/systemd/system/cups.path
+│   ├── haveged.service -> /etc/systemd/system/haveged.service
+│   ├── ModemManager.service -> /lib/systemd/system/ModemManager.service
+│   ├── networking.service -> /lib/systemd/system/networking.service
+----
+
+---
+
+[source,bash]
+----
+├── mountall-bootclean.service -> /dev/null
+├── mountall.service -> /dev/null
+├── mountdevsubfs.service -> /dev/null
+├── mountkernfs.service -> /dev/null
+├── mountnfs-bootclean.service -> /dev/null
+├── mountnfs.service -> /dev/null
+├── multi-user.target.wants
+│   ├── console-setup.service -> /lib/systemd/system/console-setup.service
+│   ├── cron.service -> /lib/systemd/system/cron.service
+│   ├── cups-browsed.service -> /lib/systemd/system/cups-browsed.service
+│   ├── cups.path -> /lib/systemd/system/cups.path
+│   ├── haveged.service -> /etc/systemd/system/haveged.service
+│   ├── ModemManager.service -> /lib/systemd/system/ModemManager.service
+│   ├── networking.service -> /lib/systemd/system/networking.service
+----
+
+---
+
+[source,ruby]
+----
+require 'asciidoctor'  # <1>
+
+Asciidoctor.convert_file 'mysample.adoc'  # <2>
+----
+<1> Imports the library
+<2> Reads, parses, and converts the file
+
+---
+
+[listing]
+sudo dnf install asciidoc
+
+---
+
+[sidebar]
+.Related information
+--
+This is aside text.
+
+It is used to present information related to the main content.
+--
+
+---
+
+.TODO list
+- Learn the AsciiDoc syntax
+- Install AsciiDoc
+- Write my document in AsciiDoc
+
+---
+
+* The header in AsciiDoc must start with a document title.
++
+----
+= Document Title
+----
++
+Keep in mind that the header is optional.
+
+* Optional Author and Revision information immediately follows the header title.
++
+----
+= Document Title
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2013-01-01
+----
+
+---
+
+* The header in AsciiDoc must start with a document title.
++
+--
+Here's an example of a document title:
+
+----
+= Document Title
+----
+
+NOTE: The header is optional.
+--
+
+---
+
+. {blank}
++
+----
+print("one")
+----
+. {blank}
++
+----
+print("one")
+----
+
+---
+.Gettysburg Address
+[[gettysburg]]
+[quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+
+Now we are engaged in a great civil war, testing whether
+that nation, or any nation so conceived and so dedicated,
+can long endure. ...
+____
+
+---
+
+[NOTE]
+====
+This is an example of an admonition block.
+
+Unlike an admonition paragraph, it may contain any AsciiDoc content.
+The style can be any one of the admonition labels:
+
+* NOTE
+* TIP
+* WARNING
+* CAUTION
+* IMPORTANT
+====
+
+---
+
+=== Hardbreaks
+---
+
+Rubies are red, +
+Topazes are blue.
+
+---
+
+[%hardbreaks]
+Ruby is red.
+Java is black.
+
+---
+
+:hardbreaks:
+Rubies are red,
+Topazes are blue.
+
+---
+
+=== Punctuation
+
+bold *constrained* & **un**constrained
+
+italic _constrained_ & __un__constrained
+
+bold italic *_constrained_* & **__un__**constrained
+
+monospace `constrained` & ``un``constrained
+
+monospace bold `*constrained*` & ``**un**``constrained
+
+monospace italic `_constrained_` & ``__un__``constrained
+
+monospace bold italic `*_constrained_*` & ``**__un__**``constrained
+
+=== Preventing substitution
+
+\*Stars* will appear as *Stars*, not as bold text.
+
+\&sect; will appear as an entity, not the &sect; symbol.
+
+\\__func__ will appear as __func__, not as emphasized text.
+
+\{two-semicolons} will appear {two-semicolons}, not resolved as ;;.
+
+=== Links
+
+Chat with other Fedora users in the irc://irc.freenode.org/#fedora[Fedora IRC channel]
+
+This is an cross reference (or internal link) to the <<bottom, bottom of the document>>
+
+=== Images
+
+
+
+To include an image on its own line (i.e., a block image), use the image:: prefix in front of the file name and square brackets after it:
+
+----
+image::sunset.jpg[]
+----
+
+If you want to specify alt text, include it inside the square brackets:
+
+----
+image::sunset.jpg[Sunset]
+----
+
+[#img-sunset]
+.A mountain sunset
+[link=https://www.flickr.com/photos/javh/5448336655]
+image::sunset.jpg[Sunset,300,200]
+
+
+== Admonitions
+
+NOTE: Wolpertingers are known to nest in server racks. Enter at your own risk
+
+TIP: Wolpertingers are known to nest in server racks. Enter at your own risk
+
+IMPORTANT: Wolpertingers are known to nest in server racks. Enter at your own risk
+
+CAUTION: Wolpertingers are known to nest in server racks. Enter at your own risk
+
+WARNING: Wolpertingers are known to nest in server racks. Enter at your own risk
+
+
+== Lists
+
+* Edgar Allen Poe
+* Sheri S. Tepper
+* Bill Bryson
+
+---
+
+.Kizmet's Favorite Authors
+* Edgar Allen Poe
+* Sheri S. Tepper
+* Bill Bryson
+
+---
+
+* Apples
+* Oranges
+
+//-
+
+* Walnuts
+* Almonds
+
+---
+
+.Possible DefOps manual locations
+* West wood maze
+** Maze heart
+*** Reflection pool
+** Secret exit
+* Untracked file in git repository
+
+---
+
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+
+---
+
+1. Protons
+2. Electrons
+3. Neutrons
+
+---
+
+. Protons
+. Electrons
+. Neutrons
+
+---
+
+[start=4]
+ . Step four
+ . Step five
+ . Step six
+
+---
+
+[%reversed]
+.Parts of an atom
+. Protons
+. Electrons
+. Neutrons
+
+---
+
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+---
+
+[lowerroman, start=5]
+. Five
+. Six
+[loweralpha]
+.. a
+.. b
+.. c
+. Seven
+
+---
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+---
+
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+---
+
+Dairy::
+* Milk
+* Eggs
+Bakery::
+* Bread
+Produce::
+* Bananas
+
+---
+
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+
+---
+
+== Tables
+
+[cols=2*,options=header]
+|===
+|Name
+|Group
+
+|Firefox
+|Web Browser
+
+|Ruby
+|Programming Language
+
+...
+|===
+
+---
+
+[cols="2,3,5"]
+|===
+|Name |Group |Description
+
+|Firefox
+|Web Browser
+|Mozilla Firefox is an open-source web browser.
+It's designed for standards compliance,
+performance and portability.
+
+|Ruby
+|Programming Language
+|A programmer's best friend.
+
+...
+|===
+
+---
+
+
+
+== Anchors
+
+[[bottom]] this is the bottom of the document
