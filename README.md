@@ -25,22 +25,22 @@ Asciidoctor is a convenient application or rendering asciidoc files in different
 
 This document can be rendered in different ways:
 
-. as _article_ in *PDF* format with the following command:
-+
-----
-asciidoctor-pdf -d article source.adoc -o asciidoc_examples.pdf
-----
+* as _article_ in *PDF* format with the following command:
 
-. as _book_ in *PDF* format with the following command:
-+
-----
+`` bash
+asciidoctor-pdf -d article source.adoc -o asciidoc_examples.pdf
+```
+
+* as _book_ in *PDF* format with the following command:
+
+``` bash
 asciidoctor-pdf -d book source.adoc -o asciidoc_examples.pdf
-----
+```
 
 or you could add this to the header of the document and lose the `-d` option:
 
-----
+``` bash
 :doctype: book
-----
+```
 
 When the document is rendered in the *PDF* format the images are embedded in the document.
