@@ -19,7 +19,7 @@ If you click on `source.adoc` here in this repo you see the live *HTML* renderin
 
 Asciidoctor is a convenient application or rendering asciidoc files in different formats
 
-    sudo apt install asciidoctor ruby-asciidoctor
+    sudo apt install asciidoctor ruby-asciidoctor ruby-asciidoctor-pdf
 
 ## Rendering
 
