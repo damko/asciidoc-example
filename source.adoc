@@ -6,12 +6,13 @@ v1.0, date_here
 :homepage: https://asciidoctor.org
 :sectanchors:
 :sectlinks:
-:sectnums:
 :media: prepress
 
 
 
 == Section titles
+
+This is how sections look like
 
 == Level 1 Section
 
@@ -22,6 +23,47 @@ v1.0, date_here
 ===== Level 4 Section
 
 ====== Level 5 Section
+
+== Header
+
+The header in AsciiDoc starts with a document title, like this:
+
+----
+= Document Title
+----
+
+
+* Optional Author and Revision information immediately follows the header title.
++
+----
+= Document Title
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2013-01-01
+----
+
+* The header can contain optional parameters which influence the rendering of the document
++
+--
+Here's an example:
+
+----
+= Document Title
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2013-01-01
+:toc:
+:imagesdir: images
+:homepage: https://asciidoctor.org
+:sectanchors:
+:sectlinks:
+:sectnums:
+:media: prepress
+----
+
+
+NOTE: Notice how this note is indented
+--
+
+NOTE: Notice how the above block is indented
 
 == Paragraphs and blocks
 
@@ -111,37 +153,12 @@ It is used to present information related to the main content.
 - Install AsciiDoc
 - Write my document in AsciiDoc
 
----
+or (same look but using `*` instead of `-`)
 
-* The header in AsciiDoc must start with a document title.
-+
-----
-= Document Title
-----
-+
-Keep in mind that the header is optional.
-
-* Optional Author and Revision information immediately follows the header title.
-+
-----
-= Document Title
-Doc Writer <doc.writer@asciidoc.org>
-v1.0, 2013-01-01
-----
-
----
-
-* The header in AsciiDoc must start with a document title.
-+
---
-Here's an example of a document title:
-
-----
-= Document Title
-----
-
-NOTE: The header is optional.
---
+.TODO list
+* Learn the AsciiDoc syntax
+* Install AsciiDoc
+* Write my document in AsciiDoc
 
 ---
 
@@ -170,6 +187,8 @@ can long endure. ...
 ____
 
 ---
+
+NOTE: This is a simple note
 
 [NOTE]
 ====
